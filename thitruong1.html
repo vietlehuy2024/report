@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+
+    <title>Bản tin thị trường</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;" data-bs-theme="light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img width="30px" height="30px" src="favicon.png"/> Bản tin tuần</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Lịch chỉ số</a>
+            <a class="nav-link" href="tinvimo.html">Tin vĩ mô</a>
+            <a class="nav-link active" aria-current="page" href="#">Thị trường I</a>
+            <a class="nav-link" href="moneymarket.html">Thị trường II</a>
+            <a class="nav-link" href="nhandinh.html">Nhận định</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br><br><br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <canvas id="myChart"></canvas>
+          <canvas id="myChart1"></canvas>
+        </div>
+        <div class="col-md-6">
+          <label>From: <input type="date" id="minDate"></label>
+          <label>To: <input type="date" id="maxDate"></label>
+          <table id="wi_lshd" class="display" style="width:100%"></table>
+          <table id="tpcp" class="display" style="width:100%"></table>
+        </div>
+      </div>
+    </div>
+  <script>
+    var loaded_lshd = false;
+    var loaded_tpcp = false;
+    var loaded_all = false;
+// 1. Create custom filter function
+$.fn.dataTable.ext.search.push(
+    function(settings, data, dataIndex) {
+        var min = $('#minDate').val();
+        var max = $('#maxDate').val();
+        var date = data[0]; // use column index for date (2nd col = index 1)
+
+        if (!date) return false;
+
+        // Parse date from string (assuming format YYYY-MM-DD)
+        var d = new Date(date);
+
+        if (
+            (min === "" || new Date(min) <= d) &&
+            (max === "" || new Date(max) >= d)
+        ) {
+            return true;
+        }
+        return false;
+    }
+);
+
+function getChartData(table) {
+  var labels = [];
+  var m13 = [];
+  var m69 = [];
+  var m12 = [];
+  table.rows({ search: 'applied' }).every(function () {
+    var data = this.data();
+    labels.push(data[0]);
+    m13.push(data[1]);
+    m69.push(data[2]);
+    m12.push(data[3]);
+  });
+  return { labels, m13, m69, m12 };
+}
+
+    $.getJSON('dulieu/wi_lshd.json?' + new Date().getTime(), function(data) {
+      //console.log(data);
+      dataTiengui = [];
+      data.forEach((item,index) => {
+        dataTiengui[index] = [item.date, parseFloat(item["1-3M"]), parseFloat(item["6-9M"]), parseFloat(item["12M"])];
+        //console.log(item);
+      }); 
+      //lãi suất huy động tiền gửi trên thị trường 1
+      var table = new DataTable('#wi_lshd', {
+        data: dataTiengui,
+        columns: [
+          { title: 'Ngày' },
+          { title: 'Kỳ hạn 3M' },
+          { title: 'Kỳ hạn 9M' },
+          { title: 'Kỳ hạn 12M' }
+        ],
+        order: [[0, 'asc']],
+        pageLength: 10
+      });
+      const ctx = document.getElementById('myChart').getContext("2d");
+      var chartData = getChartData(table);
+      //console.log(chartData);
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: chartData.labels,
+          datasets: [{
+            label: 'Kỳ hạn 3M',
+            data: chartData.m13,
+            type: 'line',
+            yAxisID: 'y',
+          },{
+            label: 'Kỳ hạn 9M',
+            data: chartData.m69,
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: 'Kỳ hạn 12M',
+            data: chartData.m12,
+            type: 'line',
+            yAxisID: 'y'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "Lãi suất huy động bình quân(%) của các NHTMCP ngoài quốc doanh"
+            },
+            legend: {
+              display: true,
+              position: 'bottom'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: false,
+              position: 'left'
+            }
+          },
+        }
+      });
+      //Table filter and chart update
+      table.on('draw', function () {
+        var newData = getChartData(table);
+        myChart.data.labels = newData.labels;
+        myChart.data.datasets[0].data = newData.m13;
+        myChart.data.datasets[1].data = newData.m69;
+        myChart.data.datasets[2].data = newData.m12;
+        myChart.update();
+      });
+      // 3. Redraw table when inputs change
+      $('#minDate, #maxDate').on('change', function() {
+          table.draw();
+      });
+      loaded_lshd = true;
+      if(loaded_tpcp==true){
+        loaded_all = true;
+        $('#minDate').val('2025-01-01');
+        console.log("Loaded all data after lshd.");
+      }
+    });      
+
+function getChartData1(table1) {
+  var labels = [];
+  var terms = {
+    "3 tháng":[],
+    "6 tháng":[],
+    "9 tháng":[],
+    "1 năm":[],
+    "2 năm":[],
+    "3 năm":[],
+    "5 năm":[],
+    "7 năm":[],
+    "10 năm":[],
+    "15 năm":[],
+    "20 năm":[],
+  };
+  table1.rows({ search: 'applied' }).every(function () {
+    var data = this.data();
+    if (labels.length==0 || labels[labels.length-1] !== data[0]) {
+      labels.push(data[0]);
+    }
+    if (data[0]==labels[labels.length-1]) {
+      terms[data[1]].push(data[3]);
+    }
+  });
+  return { labels, terms };
+}
+
+    $.getJSON('dulieu/tpcp.json?' + new Date().getTime(), function(data) {
+      //console.log(data);
+      dataTpcp = [];
+      data.forEach((item,index) => {
+        dataTpcp[index] = [item.date, item.term, parseFloat(item.rate), parseFloat(item.annualrate)];
+        //console.log(item);
+      }); 
+      //lãi suất huy động tiền gửi trên thị trường 1
+      var table1 = new DataTable('#tpcp', {
+        data: dataTpcp,
+        columns: [
+          { title: 'Ngày' },
+          { title: 'Kỳ hạn' },
+          { title: 'Liên tục' },
+          { title: 'Theo năm' }
+        ],
+        order: [[0, 'asc']],
+        pageLength: 10
+      });
+      const ctx1 = document.getElementById('myChart1').getContext("2d");
+      var chartData1 = getChartData1(table1);
+      //console.log(chartData1);
+      var myChart1 = new Chart(ctx1, {
+        type: 'line',
+        data: {
+          labels: chartData1.labels,
+          datasets: [{
+            label: '3M',
+            data: chartData1.terms["3 tháng"],
+            type: 'line',
+            yAxisID: 'y',
+          },{
+            label: '6M',
+            data: chartData1.terms["6 tháng"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '9M',
+            data: chartData1.terms["9 tháng"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '1Y',
+            data: chartData1.terms["1 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '2Y',
+            data: chartData1.terms["2 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '3Y',
+            data: chartData1.terms["3 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '5Y',
+            data: chartData1.terms["5 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '7Y',
+            data: chartData1.terms["7 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '10Y',
+            data: chartData1.terms["10 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '15Y',
+            data: chartData1.terms["15 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: '20Y',
+            data: chartData1.terms["20 năm"],
+            type: 'line',
+            yAxisID: 'y'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "Lãi suất trái phiếu chính phủ theo năm (%)"
+            },
+            legend: {
+              display: true,
+              position: 'bottom'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: false,
+              position: 'left'
+            }
+          },
+        }
+      });
+      //Table filter and chart update
+      table1.on('draw', function () {
+        var newData1 = getChartData1(table1);
+        myChart1.data.labels = newData1.labels;
+        myChart1.data.datasets[0].data = newData1.terms["3 tháng"];
+        myChart1.data.datasets[1].data = newData1.terms["6 tháng"];
+        myChart1.data.datasets[2].data = newData1.terms["9 tháng"];
+        myChart1.data.datasets[3].data = newData1.terms["1 năm"];
+        myChart1.data.datasets[4].data = newData1.terms["2 năm"];
+        myChart1.data.datasets[5].data = newData1.terms["3 năm"];
+        myChart1.data.datasets[6].data = newData1.terms["5 năm"];
+        myChart1.data.datasets[7].data = newData1.terms["7 năm"];
+        myChart1.data.datasets[8].data = newData1.terms["10 năm"];
+        myChart1.data.datasets[9].data = newData1.terms["15 năm"];
+        myChart1.data.datasets[10].data = newData1.terms["20 năm"];
+        myChart1.update();
+      });
+      // 3. Redraw table when inputs change
+      $('#minDate, #maxDate').on('change', function() {
+        table1.draw();
+      });
+      loaded_tpcp = true;
+      if(loaded_lshd==true){
+        loaded_all = true;
+        $('#minDate').val('2025-01-01');
+        $('#minDate').change();
+        console.log("Loaded all data after tpcp.");
+      }
+    });      
+    
+  </script>
+  </body>
+</html>
