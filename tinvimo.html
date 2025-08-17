@@ -63,11 +63,11 @@
             data: data,
             columns: [
                 { title: 'indicator' },
-                { title: 'news', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data;return txt.value;} },
+                { title: 'news', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data.replace("\n","<br>");return txt.value;} },
                 { title: 'group' },
                 { title: 'date', render: function(data, type, row){let d = new Date(data);return d.toISOString().split('T')[0];} },
                 { title: 'sector' },
-                { title: 'Tin vĩ mô', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data;return txt.value;} },
+                { title: 'Tin vĩ mô', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data.replace("\n","<br>");return txt.value;} },
             ],
             rowGroup: {
                 dataSrc: ['sector','group'],

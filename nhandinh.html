@@ -64,9 +64,9 @@
             data: data,
             columns: [
                 { title: 'Nhóm' },
-                { title: 'Nhận định', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data;return txt.value;} },
+                { title: 'Nhận định', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data.replace("\n","<br>");return txt.value;} },
                 { title: 'Ngày', render: function(data, type, row){let d = new Date(data);return d.toISOString().split('T')[0];} },
-                { title: 'Dịch tiếng anh', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data;return txt.value;} },
+                { title: 'Dịch tiếng anh', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data.replace("\n","<br>");return txt.value;} },
             ],
             rowGroup: {
                 dataSrc: 'group',
