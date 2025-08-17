@@ -32,8 +32,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Lịch chỉ số</a>
-            <a class="nav-link" href="tinvimo.html">Tin vĩ mô</a>
+            <a class="nav-link" href="index.html">Lịch chỉ số</a>
+            <a class="nav-link active" aria-current="page" href="#">Tin vĩ mô</a>
             <a class="nav-link" href="moneymarket.html">Thị trường tiền tệ</a>
             <a class="nav-link" href="nhandinh.html">Nhận định</a>
           </div>
@@ -44,47 +44,59 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <strong>Nguồn chỉ số</strong>
-          <select id="nationFilter">
+          <strong>Nguồn tin vĩ mô</strong>
+          <select id="sectorFilter">
             <option value="">Tất cả</option>
           </select>
-          <table id="calendarnews" class="display" style="width:100%"></table>
+          <table id="allnews" class="display" style="width:100%"></table>
         </div>
     </div>
   <script>
-    $.getJSON('dulieu/calendarnews.json?' + new Date().getTime(), function(data) {
+    $.getJSON('dulieu/allnews.json?' + new Date().getTime(), function(data) {
         console.log(data);
         data.forEach((item,index) => {
           data[index] = Object.values(item);
           //console.log(item);
         }); 
-        var table = new DataTable('#calendarnews', {
+        var table = new DataTable('#allnews', {
             data: data,
             columns: [
-                { title: 'Giờ' },
-                { title: 'Quốc gia' },
-                { title: 'Chỉ số', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data;return txt.value;} },
-                { title: 'Thực tế' },
-                { title: 'Trước đó' },
-                { title: 'Đồng thuận' },
-                { title: 'Dự báo' },
-                { title: 'Ngày', render: function(data, type, row){let d = new Date(data);return d.toISOString().split('T')[0];} },
+                { title: 'indicator' },
+                { title: 'news', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data;return txt.value;} },
+                { title: 'group' },
+                { title: 'date', render: function(data, type, row){let d = new Date(data);return d.toISOString().split('T')[0];} },
+                { title: 'sector' },
+                { title: 'Tin vĩ mô', render: function(data, type, row){var txt = document.createElement("textarea");txt.innerHTML = data;return txt.value;} },
             ],
-            order: [[1, 'desc'], [7, 'asc'], [0, 'asc']],
+            rowGroup: {
+                dataSrc: ['sector','group'],
+                startRender: function (rows, group) {
+                  return group + ' (' + rows.count() + ' news)';
+                }
+            },
+            order: [[4, 'desc'], [2, 'asc']],
             pageLength: 50,
+            columnDefs: [
+              {
+                targets: [0, 1, 2, 3, 4], // column indexes (id, email)
+                visible: false,  // hide them
+                searchable: true // optional: exclude from search
+              }
+            ]
         });
         // --- build filter dropdown based on unique column values ---
-        var nationMaps = {
-          "US":"Chỉ số vĩ mô Mỹ",
-          "VN":"Chỉ số vĩ mô Việt Nam"
+        var sectorMaps = {
+          "commodity":"Thị trường hàng hóa",
+          "united-states":"Tin vĩ mô Mỹ",
+          "vietnam":"Tin vĩ mô Việt Nam",
         }
-        table.column(1).data().unique().sort().each(function (d) {
-          $('#nationFilter').append('<option value="' + d + '">' + nationMaps[d] + '</option>');
+        table.column(4).data().unique().sort().each(function (d) {
+          $('#sectorFilter').append('<option value="' + d + '">' + sectorMaps[d] + '</option>');
         });
         // --- listen to dropdown changes and filter table ---
-        $('#nationFilter').on('change', function () {
+        $('#sectorFilter').on('change', function () {
           var val = $.fn.dataTable.util.escapeRegex($(this).val());
-          table.column(1).search(val ? '^' + val + '$' : '', true, false).draw();
+          table.column(4).search(val ? '^' + val + '$' : '', true, false).draw();
         });
     });
   </script>
