@@ -97,7 +97,7 @@ function getChartData(table) {
   return { labels, m13, m69, m12 };
 }
 
-    $.getJSON('dulieu/wi_lshd.json?' + new Date().getTime(), function(data) {
+    $.getJSON('wi_lshd.json?' + new Date().getTime(), function(data) {
       //console.log(data);
       dataTiengui = [];
       data.forEach((item,index) => {
@@ -208,7 +208,7 @@ function getChartData1(table1) {
   return { labels, terms };
 }
 
-    $.getJSON('dulieu/tpcp.json?' + new Date().getTime(), function(data) {
+    $.getJSON('tpcp.json?' + new Date().getTime(), function(data) {
       //console.log(data);
       dataTpcp = [];
       data.forEach((item,index) => {

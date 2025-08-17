@@ -106,7 +106,7 @@ function getChartData1(table) {
   return { labels, vniborons, usdvnds, tygiasbvs };
 }
 
-    $.getJSON('dulieu/omo_cashflow.json?' + new Date().getTime(), function(data) {
+    $.getJSON('omo_cashflow.json?' + new Date().getTime(), function(data) {
       //console.log(data);
       dataOmoCashflow = [];
       dataTygia = [];

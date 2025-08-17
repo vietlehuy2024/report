@@ -52,7 +52,7 @@
         </div>
     </div>
   <script>
-    $.getJSON('dulieu/calendarnews.json?' + new Date().getTime(), function(data) {
+    $.getJSON('calendarnews.json?' + new Date().getTime(), function(data) {
         console.log(data);
         data.forEach((item,index) => {
           data[index] = Object.values(item);
