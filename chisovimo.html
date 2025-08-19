@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+
+    <title>Bản tin thị trường</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;" data-bs-theme="light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img width="30px" height="30px" src="favicon.png"/> Bản tin tuần</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Lịch chỉ số</a>
+            <a class="nav-link" href="tinvimo.html">Tin vĩ mô</a>
+            <a class="nav-link active" aria-current="page" href="#">Chỉ số vĩ mô</a>
+            <a class="nav-link" href="thitruong1.html">Thị trường I</a>
+            <a class="nav-link" href="moneymarket.html">Thị trường II</a>
+            <a class="nav-link" href="nhandinh.html">Nhận định</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br><br><br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <canvas id="myChart"></canvas>
+          <canvas id="myChart1"></canvas>
+        </div>
+        <div class="col-lg-6">
+          <label>From: <input type="date" id="minDate"></label>
+          <label>To: <input type="date" id="maxDate"></label>
+          <table id="tblCpi" class="display" style="width:100%"></table>
+          <table id="tblTrade" class="display" style="width:100%"></table>
+        </div>
+      </div>
+    </div>
+  <script>
+// 1. Create custom filter function
+$.fn.dataTable.ext.search.push(
+    function(settings, data, dataIndex) {
+        var min = $('#minDate').val();
+        var max = $('#maxDate').val();
+        var date = data[0]; // use column index for date (2nd col = index 1)
+
+        if (!date) return false;
+
+        // Parse date from string (assuming format YYYY-MM-DD)
+        var d = new Date(date);
+
+        if (
+            (min === "" || new Date(min) <= d) &&
+            (max === "" || new Date(max) >= d)
+        ) {
+            return true;
+        }
+        return false;
+    }
+);
+
+function getChartData(table) {
+  var labels = [];
+  var cpis = [];
+  var vnibor3ms = [];
+  var tygiasbvs = [];
+  var usdvnds = [];
+  table.rows({ search: 'applied' }).every(function () {
+    var data = this.data();
+    labels.push(data[0]);
+    cpis.push(data[1]);
+    vnibor3ms.push(data[2]);
+    tygiasbvs.push(data[3]);
+    usdvnds.push(data[4]);
+  });
+  return { labels, cpis, vnibor3ms, tygiasbvs, usdvnds };
+}
+
+function getChartData1(table) {
+  var labels = [];
+  var exports = [];
+  var imports = [];
+  var tradebals = [];
+  var fdis = [];
+  var tygiasbvs = [];
+  var usdvnds = [];
+  table.rows({ search: 'applied' }).every(function () {
+    var data = this.data();
+    labels.push(data[0]);
+    exports.push(data[1]);
+    imports.push(-data[2]);
+    tradebals.push(data[3]);
+    tygiasbvs.push(data[4]);
+    usdvnds.push(data[5]);
+    fdis.push(data[6]);
+  });
+  return { labels, exports, imports, tradebals, tygiasbvs, usdvnds, fdis };
+}
+
+    $.getJSON('monthly.json?' + new Date().getTime(), function(data) {
+      //console.log(data);
+      dataCpi = [];
+      dataTrade = [];
+      data.forEach((item,index) => {
+        dataCpi[index] = [item.date, parseFloat(item.cpi), parseFloat(item["VNIBOR-3M"]), parseFloat(item.tygiasbv), parseFloat(item.usdvnd)];
+        dataTrade[index] = [item.date, parseFloat(item.export), parseFloat(item.import), parseFloat(item.tradebal), parseFloat(item.tygiasbv), parseFloat(item.usdvnd), Math.round(parseFloat(item.fdi*1000),2)];
+        //console.log(item);
+      }); 
+      //CPI
+      var table = new DataTable('#tblCpi', {
+        data: dataCpi,
+        columns: [
+          { title: 'Ngày' },
+          { title: 'CPI' },
+          { title: 'VNIBOR-3M' },
+          { title: 'Tỷ giá SBV' },
+          { title: 'Tỷ giá USDVND' }
+        ],
+        order: [[0, 'asc']],
+        pageLength: 25
+      });
+      const ctx = document.getElementById('myChart').getContext("2d");
+      var chartData = getChartData(table);
+      console.log(chartData);
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: chartData.labels,
+          datasets: [{
+            label: 'CPI',
+            data: chartData.cpis,
+            type: 'bar',
+            yAxisID: 'y',
+          },{
+            label: 'VNIBOR-3M',
+            data: chartData.vnibor3ms,
+            type: 'line',
+            yAxisID: 'y'
+          },{
+            label: 'Tỷ giá SBV',
+            data: chartData.tygiasbvs,
+            type: 'line',
+            yAxisID: 'y1'
+          },{
+            label: 'Tỷ giá USDVND',
+            data: chartData.usdvnds,
+            type: 'line',
+            yAxisID: 'y1'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "CPI, Lãi suất VNIBOR-3M và Tỷ giá USD/VND"
+            },
+            legend: {
+              display: true,
+              position: 'bottom'
+            }
+          },
+          scales: {
+            y: {
+              position: 'left'
+            },
+            y1: {
+              position: 'right',
+              min: Math.min(...chartData.tygiasbvs, ...chartData.usdvnds)
+            }
+          },
+        }
+      });
+      //Table filter and chart update
+      table.on('draw', function () {
+        var newData = getChartData(table);
+        myChart.data.labels = newData.labels;
+        myChart.data.datasets[0].data = newData.cpis;
+        myChart.data.datasets[1].data = newData.vnibor3ms;
+        myChart.data.datasets[2].data = newData.tygiasbvs;
+        myChart.data.datasets[3].data = newData.usdvnds;
+        myChart.update();
+      });
+      //Trade balance
+      var table1 = new DataTable('#tblTrade', {
+        data: dataTrade,
+        columns: [
+          { title: 'Ngày' },
+          { title: 'Xuất khẩu' },
+          { title: 'Nhập khẩu' },
+          { title: 'Xuất-nhập ròng' },
+          { title: 'Tỷ giá SBV' },
+          { title: 'Tỷ giá USDVND' },
+          { title: 'FDI' }
+        ],
+        order: [[0, 'asc']],
+        pageLength: 25
+      });
+      const ctx1 = document.getElementById('myChart1').getContext("2d");
+      var chartData1 = getChartData1(table1);
+      console.log(chartData1);
+      var myChart1 = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+          labels: chartData1.labels,
+          datasets: [{
+            label: 'Xuất khẩu',
+            data: chartData1.exports,
+            type: 'bar',
+            yAxisID: 'y'
+          },{
+            label: 'Nhập khẩu',
+            data: chartData1.imports,
+            type: 'bar',
+            yAxisID: 'y'
+          },{
+            label: 'Xuất-nhập ròng',
+            data: chartData1.tradebals,
+            type: 'bar',
+            yAxisID: 'y'
+          },{
+            label: 'Tỷ giá SBV',
+            data: chartData1.tygiasbvs,
+            type: 'line',
+            yAxisID: 'y1'
+          },{
+            label: 'Tỷ giá USDVND',
+            data: chartData1.usdvnds,
+            type: 'line',
+            yAxisID: 'y1'
+          },{
+            label: 'FDI',
+            data: chartData1.fdis,
+            type: 'bar',
+            yAxisID: 'y'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: true,
+              text: "Xuất-nhập khẩu, FDI và tỷ giá USD/VND"
+            },
+            legend: {
+              display: true,
+              position: 'bottom'
+            }
+          },
+          scales: {
+            y: {
+              position: 'left'
+            },
+            y1: {
+              position: 'right',
+              min: Math.min(...chartData1.tygiasbvs, ...chartData1.usdvnds)
+            }
+          },
+        }
+      });
+      //Table filter and chart update
+      table1.on('draw', function () {
+        var newData1 = getChartData1(table1);
+        myChart1.data.labels = newData1.labels;
+        myChart1.data.datasets[0].data = newData1.exports;
+        myChart1.data.datasets[1].data = newData1.imports;
+        myChart1.data.datasets[2].data = newData1.tradebals;
+        myChart1.data.datasets[3].data = newData1.tygiasbvs;
+        myChart1.data.datasets[4].data = newData1.usdvnds;
+        myChart1.data.datasets[5].data = newData1.fdis;
+        myChart1.update();
+      });
+      // 3. Redraw table when inputs change
+      $('#minDate, #maxDate').on('change', function() {
+          table.draw();
+          table1.draw();
+      });
+      $('#minDate').val('2023-12-31');
+      $('#minDate').change();
+    });
+  </script>
+  </body>
+</html>
