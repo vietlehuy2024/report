@@ -276,7 +276,7 @@ function getChartData1(table) {
           ["Tỷ giá USD/VND",newData.usdvnds[0],newData.usdvnds[newData.usdvnds.length - 1],newData.usdvnds[newData.usdvnds.length - 1]-newData.usdvnds[0], newData.usdvnds.reduce((sum,value)=>sum+value,0)/newData.usdvnds.length,Math.max(...newData.usdvnds),Math.min(...newData.usdvnds)],
           ["Tỷ giá trung tâm",newData.tygiasbvs[0],newData.tygiasbvs[newData.tygiasbvs.length - 1],newData.tygiasbvs[newData.tygiasbvs.length - 1]-newData.tygiasbvs[0], newData.tygiasbvs.reduce((sum,value)=>sum+value,0)/newData.tygiasbvs.length,Math.max(...newData.tygiasbvs),Math.min(...newData.tygiasbvs)]
         ];
-        console.log("Tổng hợp thị trường 2:",dataTonghop);
+        console.log("Diễn biến thị trường 2:",dataTonghop);
         tableTonghop.clear();
         tableTonghop.rows.add(dataTonghop).draw();
       });
