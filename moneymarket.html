@@ -46,17 +46,20 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
+          <label>From: <input type="date" id="minDate"></label>
+          <label>To: <input type="date" id="maxDate"></label>
+          <h4 class="text-center">Diễn biến từ ngày <span id="fromDate"></span> đến ngày <span id="toDate"></span></h4>
+          <table id="tonghop" class="display" style="width:100%"></table>
           <canvas id="myChart"></canvas>
           <canvas id="myChart1"></canvas>
         </div>
         <div class="col-lg-6">
-          <label>From: <input type="date" id="minDate"></label>
-          <label>To: <input type="date" id="maxDate"></label>
           <table id="omo_cashflow" class="display" style="width:100%"></table>
         </div>
       </div>
     </div>
   <script>
+    var dataTonghop = [];
 // 1. Create custom filter function
 $.fn.dataTable.ext.search.push(
     function(settings, data, dataIndex) {
@@ -83,13 +86,19 @@ function getChartData(table) {
   var labels = [];
   var values = [];
   var vniborons = [];
+  var vnibor3ms = [];
+  var usdvnds = [];
+  var tygiasbvs = [];
   table.rows({ search: 'applied' }).every(function () {
     var data = this.data();
     labels.push(data[0]);
     values.push(data[3]);
     vniborons.push(data[4]);
+    vnibor3ms.push(data[5]);
+    tygiasbvs.push(data[6]);
+    usdvnds.push(data[7]);
   });
-  return { labels, values, vniborons };
+  return { labels, values, vniborons, vnibor3ms, usdvnds, tygiasbvs };
 }
 
 function getChartData1(table) {
@@ -101,8 +110,8 @@ function getChartData1(table) {
     var data = this.data();
     labels.push(data[0]);
     vniborons.push(data[4]);
-    usdvnds.push(data[6]);
-    tygiasbvs.push(data[5]);
+    usdvnds.push(data[7]);
+    tygiasbvs.push(data[6]);
   });
   return { labels, vniborons, usdvnds, tygiasbvs };
 }
@@ -112,7 +121,7 @@ function getChartData1(table) {
       dataOmoCashflow = [];
       dataTygia = [];
       data.forEach((item,index) => {
-        dataOmoCashflow[index] = [item.date, parseFloat(item.inflow), parseFloat(item.outflow), parseFloat(item.net), parseFloat(item["VNIBOR-ON"]), parseFloat(item.tygiasbv), parseFloat(item.usdvnd)];
+        dataOmoCashflow[index] = [item.date, parseFloat(item.inflow), parseFloat(item.outflow), parseFloat(item.net), parseFloat(item["VNIBOR-ON"]), parseFloat(item["VNIBOR-3M"]), parseFloat(item.tygiasbv), parseFloat(item.usdvnd)];
         dataTygia[index] = [item.date, parseFloat(item.tygiasbv), parseFloat(item.usdvnd), parseFloat(item["VNIBOR-ON"])];
         //console.log(item);
       }); 
@@ -125,6 +134,7 @@ function getChartData1(table) {
           { title: 'Bơm' },
           { title: 'Bơm ròng' },
           { title: 'VNIBOR-ON' },
+          { title: 'VNIBOR-3M' },
           { title: 'Tỷ giá SBV' },
           { title: 'Tỷ giá USDVND' }
         ],
@@ -146,6 +156,11 @@ function getChartData1(table) {
           },{
             label: 'VNIBOR-ON',
             data: chartData.vniborons,
+            type: 'line',
+            yAxisID: 'y1'
+          },{
+            label: 'VNIBOR-3M',
+            data: chartData.vnibor3ms,
             type: 'line',
             yAxisID: 'y1'
           }]
@@ -173,6 +188,23 @@ function getChartData1(table) {
           },
         }
       });
+      //Tổng hợp thông tin thị trường
+      var tableTonghop = new DataTable('#tonghop', {
+        data: dataTonghop,
+        columns: [
+          { title: 'Chỉ số' },
+          { title: 'Đầu' },
+          { title: 'Cuối' },
+          { title: '+/-', render: function(data){return parseFloat(data).toFixed(2);} },
+          { title: 'Average', render: function(data){return parseFloat(data).toFixed(2);} },
+          { title: 'Max' },
+          { title: 'Min' }
+        ],
+        paging: false,
+        searching: false,
+        info: false,
+      });
+
       //VNIBOR-ON và tỷ giá USD/VND
       const ctx1 = document.getElementById('myChart1').getContext("2d");
       var chartData1 = getChartData1(table);
@@ -232,6 +264,21 @@ function getChartData1(table) {
         myChart1.data.datasets[0].data = newData1.values;
         myChart1.data.datasets[1].data = newData1.usdvnds;
         myChart1.update();
+        // Update date range in the title
+        var fromDate = Math.min(...newData.labels.map(date => new Date(date).getTime()));
+        var toDate = Math.max(...newData.labels.map(date => new Date(date).getTime()));
+        $('#fromDate').text(new Date(fromDate).toISOString().slice(0, 10));
+        $('#toDate').text(new Date(toDate).toISOString().slice(0, 10));
+        dataTonghop = [
+          ["Bơm ròng (tỷ)",newData.values[0],newData.values[newData.values.length - 1],newData.values.reduce((sum,value)=>sum+value,0),newData.values.reduce((sum,value)=>sum+value,0)/newData.values.length,Math.max(...newData.values),Math.min(...newData.values)],
+          ["VNIBOR-ON (%)",newData.vniborons[0],newData.vniborons[newData.vniborons.length - 1],newData.vniborons[newData.vniborons.length - 1]-newData.vniborons[0], newData.vniborons.reduce((sum,value)=>sum+value,0)/newData.vniborons.length,Math.max(...newData.vniborons),Math.min(...newData.vniborons)],
+          ["VNIBOR-3M (%)",newData.vnibor3ms[0],newData.vnibor3ms[newData.vnibor3ms.length - 1],newData.vnibor3ms[newData.vnibor3ms.length - 1]-newData.vnibor3ms[0], newData.vnibor3ms.reduce((sum,value)=>sum+value,0)/newData.vnibor3ms.length,Math.max(...newData.vnibor3ms),Math.min(...newData.vnibor3ms)],
+          ["Tỷ giá USD/VND",newData.usdvnds[0],newData.usdvnds[newData.usdvnds.length - 1],newData.usdvnds[newData.usdvnds.length - 1]-newData.usdvnds[0], newData.usdvnds.reduce((sum,value)=>sum+value,0)/newData.usdvnds.length,Math.max(...newData.usdvnds),Math.min(...newData.usdvnds)],
+          ["Tỷ giá trung tâm",newData.tygiasbvs[0],newData.tygiasbvs[newData.tygiasbvs.length - 1],newData.tygiasbvs[newData.tygiasbvs.length - 1]-newData.tygiasbvs[0], newData.tygiasbvs.reduce((sum,value)=>sum+value,0)/newData.tygiasbvs.length,Math.max(...newData.tygiasbvs),Math.min(...newData.tygiasbvs)]
+        ];
+        console.log("Tổng hợp thị trường 2:",dataTonghop);
+        tableTonghop.clear();
+        tableTonghop.rows.add(dataTonghop).draw();
       });
       // 3. Redraw table when inputs change
       $('#minDate, #maxDate').on('change', function() {
