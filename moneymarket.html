@@ -104,14 +104,14 @@ function getChartData(table) {
 function getChartData1(table) {
   var labels = [];
   var vniborons = [];
-  var usdvnds = [];
   var tygiasbvs = [];
+  var usdvnds = [];
   table.rows({ search: 'applied' }).every(function () {
     var data = this.data();
     labels.push(data[0]);
     vniborons.push(data[4]);
-    usdvnds.push(data[7]);
     tygiasbvs.push(data[6]);
+    usdvnds.push(data[7]);
   });
   return { labels, vniborons, usdvnds, tygiasbvs };
 }
@@ -261,8 +261,10 @@ function getChartData1(table) {
         myChart.update();
         var newData1 = getChartData1(table);
         myChart1.data.labels = newData1.labels;
-        myChart1.data.datasets[0].data = newData1.values;
-        myChart1.data.datasets[1].data = newData1.usdvnds;
+        myChart1.data.datasets[0].data = newData1.usdvnds;
+        myChart1.data.datasets[1].data = newData1.tygiasbvs;
+        myChart1.data.datasets[2].data = newData1.vniborons;
+        console.log("myChart1.data.datasets:", myChart1.data.datasets);
         myChart1.update();
         // Update date range in the title
         var fromDate = Math.min(...newData.labels.map(date => new Date(date).getTime()));
