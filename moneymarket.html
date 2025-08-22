@@ -46,9 +46,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
-          <label>From: <input type="date" id="minDate"></label>
-          <label>To: <input type="date" id="maxDate"></label>
-          <h4 class="text-center">Diễn biến từ ngày <span id="fromDate"></span> đến ngày <span id="toDate"></span></h4>
+          <div class="text text-center text-success fw-bold">Diễn biến từ ngày <span id="fromDate"><input type="date" id="minDate"></span> đến ngày <span id="toDate"><input type="date" id="maxDate"></span></div>
           <table id="tonghop" class="display" style="width:100%"></table>
           <canvas id="myChart"></canvas>
           <canvas id="myChart1"></canvas>
@@ -269,8 +267,8 @@ function getChartData1(table) {
         // Update date range in the title
         var fromDate = Math.min(...newData.labels.map(date => new Date(date).getTime()));
         var toDate = Math.max(...newData.labels.map(date => new Date(date).getTime()));
-        $('#fromDate').text(new Date(fromDate).toISOString().slice(0, 10));
-        $('#toDate').text(new Date(toDate).toISOString().slice(0, 10));
+        //$('#fromDate').text(new Date(fromDate).toISOString().slice(0, 10));
+        //$('#toDate').text(new Date(toDate).toISOString().slice(0, 10));
         dataTonghop = [
           ["Bơm ròng (tỷ)",newData.values[0],newData.values[newData.values.length - 1],newData.values.reduce((sum,value)=>sum+value,0),newData.values.reduce((sum,value)=>sum+value,0)/newData.values.length,Math.max(...newData.values),Math.min(...newData.values)],
           ["VNIBOR-ON (%)",newData.vniborons[0],newData.vniborons[newData.vniborons.length - 1],newData.vniborons[newData.vniborons.length - 1]-newData.vniborons[0], newData.vniborons.reduce((sum,value)=>sum+value,0)/newData.vniborons.length,Math.max(...newData.vniborons),Math.min(...newData.vniborons)],
