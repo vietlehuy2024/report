@@ -70,7 +70,7 @@
                 { title: 'Trước đó' },
                 { title: 'Đồng thuận' },
                 { title: 'Dự báo' },
-                { title: 'Ngày', render: function(data, type, row){let d = new Date(data);return d.toISOString().split('T')[0];} },
+                { title: 'Ngày', render: function(data, type, row){const [day, month, year] = data.split(' ')[0].split('/');let d = new Date(year,month-1,day);return d.toISOString().split('T')[0];} },
             ],
             order: [[1, 'desc'], [7, 'asc'], [0, 'asc']],
             pageLength: 50,
