@@ -256,6 +256,7 @@ function getChartData1(table) {
         myChart.data.labels = newData.labels;
         myChart.data.datasets[0].data = newData.values;
         myChart.data.datasets[1].data = newData.vniborons;
+        myChart.data.datasets[2].data = newData.vnibor3ms;
         myChart.update();
         var newData1 = getChartData1(table);
         myChart1.data.labels = newData1.labels;
