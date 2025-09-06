@@ -1,0 +1,182 @@
+[
+  {
+    "date": "2018-03-31",
+    "gdp": 1027928,
+    "realgdp": 637244,
+    "realgdprate": 7.38
+  },
+  {
+    "date": "2018-06-30",
+    "gdp": 1414236.5,
+    "realgdp": 2358942.5,
+    "realgdprate": 6.79
+  },
+  {
+    "date": "2018-09-30",
+    "gdp": 1242220,
+    "realgdp": 1466960,
+    "realgdprate": 6.88
+  },
+  {
+    "date": "2018-12-31",
+    "gdp": 1851928,
+    "realgdp": 1134963,
+    "realgdprate": 7.31
+  },
+  {
+    "date": "2019-03-31",
+    "gdp": 1116680,
+    "realgdp": 681010,
+    "realgdprate": 6.79
+  },
+  {
+    "date": "2019-06-30",
+    "gdp": 1366899,
+    "realgdp": 884508,
+    "realgdprate": 6.71
+  },
+  {
+    "date": "2019-09-30",
+    "gdp": 1539114,
+    "realgdp": 957109,
+    "realgdprate": 7.31
+  },
+  {
+    "date": "2019-12-31",
+    "gdp": 2010887,
+    "realgdp": 1214052,
+    "realgdprate": 6.97
+  },
+  {
+    "date": "2020-03-31",
+    "gdp": 1188207,
+    "realgdp": 707223,
+    "realgdprate": 3.82
+  },
+  {
+    "date": "2020-06-30",
+    "gdp": 1382995,
+    "realgdp": 887862,
+    "realgdprate": 0.36
+  },
+  {
+    "date": "2020-09-30",
+    "gdp": 1593586,
+    "realgdp": 983730,
+    "realgdprate": 2.62
+  },
+  {
+    "date": "2020-12-31",
+    "gdp": 2121415,
+    "realgdp": 1268385,
+    "realgdprate": 4.48
+  },
+  {
+    "date": "2021-03-31",
+    "gdp": 1915368,
+    "realgdp": 1189216,
+    "realgdprate": 4.48
+  },
+  {
+    "date": "2021-06-30",
+    "gdp": 2050431,
+    "realgdp": 1248813,
+    "realgdprate": 6.61
+  },
+  {
+    "date": "2021-09-30",
+    "gdp": 1986949,
+    "realgdp": 1201066,
+    "realgdprate": -6.17
+  },
+  {
+    "date": "2021-12-31",
+    "gdp": 2399005,
+    "realgdp": 1467490,
+    "realgdprate": 5.22
+  },
+  {
+    "date": "2022-03-31",
+    "gdp": 2132796,
+    "realgdp": 1255312,
+    "realgdprate": 5.03
+  },
+  {
+    "date": "2022-06-30",
+    "gdp": 2292012,
+    "realgdp": 1346821,
+    "realgdprate": 7.72
+  },
+  {
+    "date": "2022-09-30",
+    "gdp": 2373152,
+    "realgdp": 1376321,
+    "realgdprate": 13.67
+  },
+  {
+    "date": "2022-12-31",
+    "gdp": 2669131,
+    "realgdp": 1538951,
+    "realgdprate": 5.92
+  },
+  {
+    "date": "2023-03-31",
+    "gdp": 2300882,
+    "realgdp": 1320755,
+    "realgdprate": 3.32
+  },
+  {
+    "date": "2023-06-30",
+    "gdp": 2444649,
+    "realgdp": 1407473,
+    "realgdprate": 4.14
+  },
+  {
+    "date": "2023-09-30",
+    "gdp": 2540588,
+    "realgdp": 1450322,
+    "realgdprate": 5.33
+  },
+  {
+    "date": "2023-12-31",
+    "gdp": 2921187,
+    "realgdp": 1643902,
+    "realgdprate": 6.72
+  },
+  {
+    "date": "2024-03-31",
+    "gdp": 2513091,
+    "realgdp": 1396660,
+    "realgdprate": 5.66
+  },
+  {
+    "date": "2024-06-30",
+    "gdp": 2727565,
+    "realgdp": 1508387,
+    "realgdprate": 6.93
+  },
+  {
+    "date": "2024-09-30",
+    "gdp": 2894998,
+    "realgdp": 1567923,
+    "realgdprate": 7.43
+  },
+  {
+    "date": "2024-12-31",
+    "gdp": 3297408,
+    "realgdp": 1773652,
+    "realgdprate": 7.55
+  },
+  {
+    "date": "2025-03-31",
+    "gdp": 2809099,
+    "realgdp": 1502807,
+    "realgdprate": 6.93
+  },
+  {
+    "date": "2025-06-30",
+    "gdp": 3091123,
+    "realgdp": 1643317,
+    "realgdprate": 7.96
+  }
+]

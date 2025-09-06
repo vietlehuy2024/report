@@ -1,0 +1,144 @@
+<!-- templates/lshd.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/buttons/3.2.4/css/buttons.dataTables.css" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.4/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.4/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.4/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.4/js/buttons.print.min.js"></script>
+
+    <title>Phân tích thị trường - Lãi suất huy động</title>
+    <link rel="icon" href="static/images/favicon.png" type="image/png">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="static/images/favicon.png" width="24" height="24"/> Bản tin thị trường</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Lãi suất / tỷ giá
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li class="nav-item"><a class="nav-link" href="tpcp.html">Trái phiếu chính phủ (HNX)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lshd.html">Lãi suất huy động</a></li>
+                    <li class="nav-item"><a class="nav-link" href="omo.html">Thị trường mở (OMO)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="interbank.html">Liên ngân hàng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sofr.html">Lãi suất SOFR</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tygia.html">Tỷ giá ngoại tệ</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dữ liệu vĩ mô
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li class="nav-item"><a class="nav-link" href="calendar.html">Lịch chỉ số</a></li>
+                    <li class="nav-item"><a class="nav-link" href="allnews.html">Tin vĩ mô</a></li>
+                    <li class="nav-item"><a class="nav-link" href="monthly.html">Chỉ số vĩ mô-tháng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quarterly.html">Chỉ số vĩ mô-quý</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Giới thiệu</a></li>
+              </ul>
+              <span class="navbar-text">
+                <a class="btn btn-outline-primary btn-sm" href="login.html"><i class="bi bi-person"></i> Đăng nhập</a>
+              </span>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+        <li class="breadcrumb-item active" aria-current="calendar">Lãi suất huy động</li>
+      </ol>
+    </nav>
+    <div class="alert alert-warning" role="alert" id="alert"></div>
+    <div class='progress' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'><div id='progress' class='progress-bar bg-success' style='width: 0%'></div></div>
+    <table class="table table-hover" id="alldata"></table>
+    <script>
+      var arr_data = [];
+      function display_alldata() {
+        $('#alldata').DataTable().clear();
+        $('#alldata').DataTable().destroy();
+        // Sort by date (ascending)
+        arr_data.sort((a, b) => a.date.localeCompare(b.date));
+        $('#alldata').DataTable( {
+          data: arr_data,
+          columns: [
+            { data: 'date', title: 'Ngày' },
+            { data: '1-3M', title: '1-3M' },
+            { data: '6-9M', title: '6-9M' },
+            { data: '12M', title: '12M' }
+          ],
+          order: [[0, 'asc']],
+          pageLength: 10,
+          layout: {
+            topStart: {
+              buttons: ['pageLength', 'copy', 'csv', 'excel', 'pdf', 'print']
+            }
+          }
+        } );
+        $("#progress").css("width","100%");
+        $("#progress").html("Số dòng dữ liệu: "+arr_data.length);
+      }
+      $(document).ready(function() {
+        $("#alert").html("Đang tải dữ liệu ...");
+        $("#progress").html("");
+        $("#progress").css("width","0%");
+        arr_data = [];
+        $.get("static/data/wi_lshd.json", function(data) {
+          arr_data = data;
+          display_alldata();
+          $("#alert").html("Đã tải xong dữ liệu <a target='_blank' href='static/data/wi_lshd.json'>static/data/wi_lshd.json</a>");
+          $("#progress").css("width","100%");
+        }).fail(()=>{
+          $("#alert").html("Không có dữ liệu");
+        });
+      });
+    </script>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2025 Agribank - Trung tâm Quản lý rủi ro phi tín dụng - Phòng QLRR Thị trường</p>
+    </footer>
+  </body>
+</html>
