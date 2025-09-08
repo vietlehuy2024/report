@@ -1,65 +1,5 @@
 ﻿[
   {
-    "time": "09:00 AM",
-    "nation": "VN",
-    "indicator": "Balance of Trade JUL",
-    "actual": "$2.27B",
-    "previous": "$2.86B",
-    "consensus": "",
-    "forecast": "$2.5B",
-    "date": "06/08/2025 00:00:00"
-  },
-  {
-    "time": "09:00 AM",
-    "nation": "VN",
-    "indicator": "Foreign Direct Investment JUL",
-    "actual": "$13.60B",
-    "previous": "$11.72B",
-    "consensus": "",
-    "forecast": "$13.1B",
-    "date": "06/08/2025 00:00:00"
-  },
-  {
-    "time": "09:00 AM",
-    "nation": "VN",
-    "indicator": "Industrial Production YoY JUL",
-    "actual": "8.5%",
-    "previous": "8.0%",
-    "consensus": "",
-    "forecast": "11.3%",
-    "date": "06/08/2025 00:00:00"
-  },
-  {
-    "time": "09:00 AM",
-    "nation": "VN",
-    "indicator": "Inflation Rate YoY JUL",
-    "actual": "3.19%",
-    "previous": "3.57%",
-    "consensus": "",
-    "forecast": "3.4%",
-    "date": "06/08/2025 00:00:00"
-  },
-  {
-    "time": "09:00 AM",
-    "nation": "VN",
-    "indicator": "Retail Sales YoY JUL",
-    "actual": "9.2%",
-    "previous": "8.3%",
-    "consensus": "",
-    "forecast": "7.7%",
-    "date": "06/08/2025 00:00:00"
-  },
-  {
-    "time": "09:00 AM",
-    "nation": "VN",
-    "indicator": "Tourist Arrivals YoY JUL",
-    "actual": "35.7%",
-    "previous": "16.3%",
-    "consensus": "",
-    "forecast": "",
-    "date": "06/08/2025 00:00:00"
-  },
-  {
     "time": "07:30 AM",
     "nation": "VN",
     "indicator": "S&amp;amp;P Global Manufacturing PMI AUG",
@@ -67,87 +7,67 @@
     "previous": "52.4",
     "consensus": "",
     "forecast": "52.1",
-    "date": "03/09/2025 00:00:00"
-  },
-  {
-    "time": "07:30 AM",
-    "nation": "VN",
-    "indicator": "S&amp;amp;P Global Manufacturing PMI AUG",
-    "actual": "50.4",
-    "previous": "52.4",
-    "consensus": "",
-    "forecast": "52.1",
-    "date": "03/09/2025 00:00:00"
+    "date": "9/3/2025 12:00:00 AM"
   },
   {
     "time": "09:00 AM",
     "nation": "VN",
     "indicator": "Balance of Trade AUG",
-    "actual": "",
-    "previous": "$2.27B",
+    "actual": "$3.72B",
+    "previous": "$2.29B",
     "consensus": "",
     "forecast": "$3.9B",
-    "date": "06/09/2025 00:00:00"
+    "date": "9/6/2025 12:00:00 AM"
   },
   {
     "time": "09:00 AM",
     "nation": "VN",
     "indicator": "Foreign Direct Investment AUG",
-    "actual": "",
+    "actual": "$15.40B",
     "previous": "$13.60B",
     "consensus": "",
     "forecast": "$14.5B",
-    "date": "06/09/2025 00:00:00"
+    "date": "9/6/2025 12:00:00 AM"
   },
   {
     "time": "09:00 AM",
     "nation": "VN",
     "indicator": "Industrial Production YoY AUG",
-    "actual": "",
-    "previous": "8.5%",
+    "actual": "8.9%",
+    "previous": "7.4%",
     "consensus": "",
     "forecast": "9.0%",
-    "date": "06/09/2025 00:00:00"
+    "date": "9/6/2025 12:00:00 AM"
   },
   {
     "time": "09:00 AM",
     "nation": "VN",
     "indicator": "Inflation Rate YoY AUG",
-    "actual": "",
+    "actual": "3.24%",
     "previous": "3.19%",
     "consensus": "",
     "forecast": "3.1%",
-    "date": "06/09/2025 00:00:00"
+    "date": "9/6/2025 12:00:00 AM"
   },
   {
     "time": "09:00 AM",
     "nation": "VN",
     "indicator": "Retail Sales YoY AUG",
-    "actual": "",
+    "actual": "10.6%",
     "previous": "9.2%",
     "consensus": "",
     "forecast": "8.8%",
-    "date": "06/09/2025 00:00:00"
+    "date": "9/6/2025 12:00:00 AM"
   },
   {
     "time": "09:00 AM",
     "nation": "VN",
     "indicator": "Tourist Arrivals YoY AUG",
-    "actual": "",
+    "actual": "16.5%",
     "previous": "35.7%",
     "consensus": "",
     "forecast": "",
-    "date": "06/09/2025 00:00:00"
-  },
-  {
-    "time": "09:00 PM",
-    "nation": "US",
-    "indicator": "ISM Services PMI JUL",
-    "actual": "50.1",
-    "previous": "50.8",
-    "consensus": "51.5",
-    "forecast": "51",
-    "date": "05/08/2025 00:00:00"
+    "date": "9/6/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -157,7 +77,7 @@
     "previous": "0.2%",
     "consensus": "0.3%",
     "forecast": "0.2%",
-    "date": "12/08/2025 00:00:00"
+    "date": "8/12/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -167,7 +87,7 @@
     "previous": "2.9%",
     "consensus": "3%",
     "forecast": "3%",
-    "date": "12/08/2025 00:00:00"
+    "date": "8/12/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -177,7 +97,7 @@
     "previous": "0.3%",
     "consensus": "0.2%",
     "forecast": "0.2%",
-    "date": "12/08/2025 00:00:00"
+    "date": "8/12/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -187,7 +107,7 @@
     "previous": "2.7%",
     "consensus": "2.8%",
     "forecast": "2.7%",
-    "date": "12/08/2025 00:00:00"
+    "date": "8/12/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -197,7 +117,7 @@
     "previous": "0%",
     "consensus": "0.2%",
     "forecast": "0.2%",
-    "date": "14/08/2025 00:00:00"
+    "date": "8/14/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -207,7 +127,7 @@
     "previous": "0.9%",
     "consensus": "0.5%",
     "forecast": "0.4%",
-    "date": "15/08/2025 00:00:00"
+    "date": "8/15/2025 12:00:00 AM"
   },
   {
     "time": "09:00 PM",
@@ -217,7 +137,7 @@
     "previous": "61.7",
     "consensus": "62",
     "forecast": "60.5",
-    "date": "15/08/2025 00:00:00"
+    "date": "8/15/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -227,7 +147,7 @@
     "previous": "1.393M",
     "consensus": "1.39M",
     "forecast": "1.39M",
-    "date": "19/08/2025 00:00:00"
+    "date": "8/19/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -237,7 +157,7 @@
     "previous": "1.358M",
     "consensus": "1.29M",
     "forecast": "1.29M",
-    "date": "19/08/2025 00:00:00"
+    "date": "8/19/2025 12:00:00 AM"
   },
   {
     "time": "01:00 AM",
@@ -247,7 +167,7 @@
     "previous": "",
     "consensus": "",
     "forecast": "",
-    "date": "21/08/2025 00:00:00"
+    "date": "8/21/2025 12:00:00 AM"
   },
   {
     "time": "09:00 PM",
@@ -257,7 +177,7 @@
     "previous": "3.93M",
     "consensus": "3.92M",
     "forecast": "3.9M",
-    "date": "21/08/2025 00:00:00"
+    "date": "8/21/2025 12:00:00 AM"
   },
   {
     "time": "09:00 PM",
@@ -267,7 +187,7 @@
     "previous": "",
     "consensus": "",
     "forecast": "",
-    "date": "22/08/2025 00:00:00"
+    "date": "8/22/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -277,7 +197,7 @@
     "previous": "-9.4%",
     "consensus": "-4%",
     "forecast": "-2.5%",
-    "date": "26/08/2025 00:00:00"
+    "date": "8/26/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -287,7 +207,7 @@
     "previous": "-0.5%",
     "consensus": "3.1%",
     "forecast": "3.0%",
-    "date": "28/08/2025 00:00:00"
+    "date": "8/28/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -297,7 +217,7 @@
     "previous": "0.3%",
     "consensus": "0.3%",
     "forecast": "0.2%",
-    "date": "29/08/2025 00:00:00"
+    "date": "8/29/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -307,7 +227,7 @@
     "previous": "0.3%",
     "consensus": "0.4%",
     "forecast": "0.3%",
-    "date": "29/08/2025 00:00:00"
+    "date": "8/29/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -317,7 +237,7 @@
     "previous": "0.4%",
     "consensus": "0.5%",
     "forecast": "0.3%",
-    "date": "29/08/2025 00:00:00"
+    "date": "8/29/2025 12:00:00 AM"
   },
   {
     "time": "09:00 PM",
@@ -327,77 +247,67 @@
     "previous": "48.0",
     "consensus": "49",
     "forecast": "48.2",
-    "date": "02/09/2025 00:00:00"
+    "date": "9/2/2025 12:00:00 AM"
   },
   {
     "time": "09:00 PM",
     "nation": "US",
     "indicator": "JOLTs Job Openings JUL",
-    "actual": "",
-    "previous": "7.437M",
+    "actual": "7.181M",
+    "previous": "7.357M",
     "consensus": "7.4M",
     "forecast": "7.3M",
-    "date": "03/09/2025 00:00:00"
-  },
-  {
-    "time": "09:00 PM",
-    "nation": "US",
-    "indicator": "ISM Manufacturing PMI AUG",
-    "actual": "48.7",
-    "previous": "48.0",
-    "consensus": "49",
-    "forecast": "48.2",
-    "date": "02/09/2025 00:00:00"
-  },
-  {
-    "time": "09:00 PM",
-    "nation": "US",
-    "indicator": "JOLTs Job Openings JUL",
-    "actual": "",
-    "previous": "7.437M",
-    "consensus": "7.4M",
-    "forecast": "7.3M",
-    "date": "03/09/2025 00:00:00"
+    "date": "9/3/2025 12:00:00 AM"
   },
   {
     "time": "09:00 PM",
     "nation": "US",
     "indicator": "ISM Services PMI AUG",
-    "actual": "",
+    "actual": "52.0",
     "previous": "50.1",
     "consensus": "51",
     "forecast": "50.7",
-    "date": "04/09/2025 00:00:00"
+    "date": "9/4/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "Non Farm Payrolls AUG",
-    "actual": "",
-    "previous": "73K",
+    "actual": "22K",
+    "previous": "79K",
     "consensus": "75K",
     "forecast": "75.0K",
-    "date": "05/09/2025 00:00:00"
+    "date": "9/5/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "Unemployment Rate AUG",
-    "actual": "",
+    "actual": "4.3%",
     "previous": "4.2%",
     "consensus": "4.3%",
     "forecast": "4.2%",
-    "date": "05/09/2025 00:00:00"
+    "date": "9/5/2025 12:00:00 AM"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Non Farm Payrolls Annual Revision",
+    "actual": "",
+    "previous": "-818K",
+    "consensus": "",
+    "forecast": "",
+    "date": "9/9/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "PPI MoM AUG",
     "actual": "",
-    "previous": "",
-    "consensus": "",
-    "forecast": "",
-    "date": "10/09/2025 00:00:00"
+    "previous": "0.9%",
+    "consensus": "0.3%",
+    "forecast": "0.6%",
+    "date": "9/10/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -405,9 +315,9 @@
     "indicator": "Core Inflation Rate MoM AUG",
     "actual": "",
     "previous": "0.3%",
-    "consensus": "",
-    "forecast": "",
-    "date": "11/09/2025 00:00:00"
+    "consensus": "0.3%",
+    "forecast": "0.3%",
+    "date": "9/11/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -416,8 +326,8 @@
     "actual": "",
     "previous": "3.1%",
     "consensus": "",
-    "forecast": "",
-    "date": "11/09/2025 00:00:00"
+    "forecast": "3.1%",
+    "date": "9/11/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -425,9 +335,9 @@
     "indicator": "Inflation Rate MoM AUG",
     "actual": "",
     "previous": "0.2%",
-    "consensus": "",
-    "forecast": "",
-    "date": "11/09/2025 00:00:00"
+    "consensus": "0.3%",
+    "forecast": "0.3%",
+    "date": "9/11/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -435,9 +345,9 @@
     "indicator": "Inflation Rate YoY AUG",
     "actual": "",
     "previous": "2.7%",
-    "consensus": "",
-    "forecast": "",
-    "date": "11/09/2025 00:00:00"
+    "consensus": "2.9%",
+    "forecast": "2.8%",
+    "date": "9/11/2025 12:00:00 AM"
   },
   {
     "time": "09:00 PM",
@@ -445,9 +355,9 @@
     "indicator": "Michigan Consumer Sentiment Prel SEP",
     "actual": "",
     "previous": "58.2",
-    "consensus": "",
+    "consensus": "59.2",
     "forecast": "57",
-    "date": "12/09/2025 00:00:00"
+    "date": "9/12/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -457,7 +367,7 @@
     "previous": "",
     "consensus": "",
     "forecast": "",
-    "date": "16/09/2025 00:00:00"
+    "date": "9/16/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -467,7 +377,7 @@
     "previous": "1.362M",
     "consensus": "",
     "forecast": "",
-    "date": "17/09/2025 00:00:00"
+    "date": "9/17/2025 12:00:00 AM"
   },
   {
     "time": "07:30 PM",
@@ -477,7 +387,7 @@
     "previous": "1.428M",
     "consensus": "",
     "forecast": "",
-    "date": "17/09/2025 00:00:00"
+    "date": "9/17/2025 12:00:00 AM"
   },
   {
     "time": "01:00 AM",
@@ -487,7 +397,7 @@
     "previous": "4.5%",
     "consensus": "",
     "forecast": "4.25%",
-    "date": "18/09/2025 00:00:00"
+    "date": "9/18/2025 12:00:00 AM"
   },
   {
     "time": "01:00 AM",
@@ -497,7 +407,7 @@
     "previous": "",
     "consensus": "",
     "forecast": "",
-    "date": "18/09/2025 00:00:00"
+    "date": "9/18/2025 12:00:00 AM"
   },
   {
     "time": "01:30 AM",
@@ -507,6 +417,66 @@
     "previous": "",
     "consensus": "",
     "forecast": "",
-    "date": "18/09/2025 00:00:00"
+    "date": "9/18/2025 12:00:00 AM"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Existing Home Sales AUG",
+    "actual": "",
+    "previous": "4.01M",
+    "consensus": "",
+    "forecast": "",
+    "date": "9/23/2025 12:00:00 AM"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Durable Goods Orders MoM AUG",
+    "actual": "",
+    "previous": "-2.8%",
+    "consensus": "",
+    "forecast": "",
+    "date": "9/25/2025 12:00:00 AM"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "GDP Growth Rate QoQ Final Q2",
+    "actual": "",
+    "previous": "-0.5%",
+    "consensus": "",
+    "forecast": "3.3%",
+    "date": "9/25/2025 12:00:00 AM"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core PCE Price Index MoM AUG",
+    "actual": "",
+    "previous": "0.3%",
+    "consensus": "",
+    "forecast": "",
+    "date": "9/26/2025 12:00:00 AM"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Income MoM AUG",
+    "actual": "",
+    "previous": "",
+    "consensus": "",
+    "forecast": "",
+    "date": "9/26/2025 12:00:00 AM"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Spending MoM AUG",
+    "actual": "",
+    "previous": "0.5%",
+    "consensus": "",
+    "forecast": "",
+    "date": "9/26/2025 12:00:00 AM"
   }
 ]
