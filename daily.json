@@ -25538,5 +25538,55 @@
     "VNIBOR-2W": "5",
     "VNIBOR-1M": "4.99",
     "VNIBOR-3M": "5.67"
+  },
+  {
+    "date": "2025-08-28",
+    "tygiasbv": "25268",
+    "usdvnd": "26360",
+    "VNIBOR-ON": "2.03",
+    "VNIBOR-1W": "3.97",
+    "VNIBOR-2W": "4.75",
+    "VNIBOR-1M": "4.95",
+    "VNIBOR-3M": "5.53"
+  },
+  {
+    "date": "2025-08-29",
+    "tygiasbv": "25240",
+    "usdvnd": "26360",
+    "VNIBOR-ON": "2.03",
+    "VNIBOR-1W": "3.84",
+    "VNIBOR-2W": "4.84",
+    "VNIBOR-1M": "5.11",
+    "VNIBOR-3M": "5.58"
+  },
+  {
+    "date": "2025-08-30",
+    "tygiasbv": "25240",
+    "usdvnd": "26360",
+    "VNIBOR-ON": "2.03",
+    "VNIBOR-1W": "3.84",
+    "VNIBOR-2W": "4.84",
+    "VNIBOR-1M": "5.11",
+    "VNIBOR-3M": "5.58"
+  },
+  {
+    "date": "2025-09-03",
+    "tygiasbv": "25246",
+    "usdvnd": "26365",
+    "VNIBOR-ON": "4.99",
+    "VNIBOR-1W": "5.05",
+    "VNIBOR-2W": "5.18",
+    "VNIBOR-1M": "4.84",
+    "VNIBOR-3M": "6.04"
+  },
+  {
+    "date": "2025-09-04",
+    "tygiasbv": "25248",
+    "usdvnd": "26360",
+    "VNIBOR-ON": "4.7",
+    "VNIBOR-1W": "4.8",
+    "VNIBOR-2W": "5.13",
+    "VNIBOR-1M": "4.87",
+    "VNIBOR-3M": "5.62"
   }
 ]
