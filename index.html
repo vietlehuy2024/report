@@ -274,15 +274,6 @@
               {data: "retailsale", title: "Bán lẻ"},
               {data: "pmi", title: "PMI"},
             ],
-            columnDefs: [
-              {
-                render: (data, type, row) =>{
-                  return data?parseFloat(data).toFixed(2):null;
-                },
-                targets: 3
-              },
-              { orderable: false, targets: [1,2,3] }
-            ],
             order: [[0, 'asc']],
             pageLength: 10,
             //dom: 'lfrtip',
