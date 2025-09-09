@@ -263,6 +263,7 @@
           $('#groupFilter').change();
         });
         $.get("static/data/macrotrend.json",function(data){
+          console.log(data);
           $('#indicator').DataTable( {
             data:data,
             columns: [
