@@ -293,7 +293,7 @@
     "time": "09:00 PM",
     "nation": "US",
     "indicator": "Non Farm Payrolls Annual Revision",
-    "actual": "",
+    "actual": "-911K",
     "previous": "-818K",
     "consensus": "",
     "forecast": "",
@@ -306,7 +306,7 @@
     "actual": "",
     "previous": "0.9%",
     "consensus": "0.3%",
-    "forecast": "0.6%",
+    "forecast": "0.4%",
     "date": "2025-09-10"
   },
   {
@@ -325,7 +325,7 @@
     "indicator": "Core Inflation Rate YoY AUG",
     "actual": "",
     "previous": "3.1%",
-    "consensus": "",
+    "consensus": "3.1%",
     "forecast": "3.1%",
     "date": "2025-09-11"
   },
@@ -355,7 +355,7 @@
     "indicator": "Michigan Consumer Sentiment Prel SEP",
     "actual": "",
     "previous": "58.2",
-    "consensus": "59.2",
+    "consensus": "58",
     "forecast": "57",
     "date": "2025-09-12"
   },
@@ -364,9 +364,9 @@
     "nation": "US",
     "indicator": "Retail Sales MoM AUG",
     "actual": "",
-    "previous": "",
+    "previous": "0.5%",
     "consensus": "",
-    "forecast": "",
+    "forecast": "0.4%",
     "date": "2025-09-16"
   },
   {
@@ -376,7 +376,7 @@
     "actual": "",
     "previous": "1.362M",
     "consensus": "",
-    "forecast": "",
+    "forecast": "1.37M",
     "date": "2025-09-17"
   },
   {
@@ -386,7 +386,7 @@
     "actual": "",
     "previous": "1.428M",
     "consensus": "",
-    "forecast": "",
+    "forecast": "1.37M",
     "date": "2025-09-17"
   },
   {
@@ -395,7 +395,7 @@
     "indicator": "Fed Interest Rate Decision",
     "actual": "",
     "previous": "4.5%",
-    "consensus": "",
+    "consensus": "4.25%",
     "forecast": "4.25%",
     "date": "2025-09-18"
   },
@@ -448,5 +448,35 @@
     "consensus": "",
     "forecast": "3.3%",
     "date": "2025-09-25"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core PCE Price Index MoM AUG",
+    "actual": "",
+    "previous": "0.3%",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-26"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Income MoM AUG",
+    "actual": "",
+    "previous": "",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-26"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Spending MoM AUG",
+    "actual": "",
+    "previous": "0.5%",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-26"
   }
 ]
