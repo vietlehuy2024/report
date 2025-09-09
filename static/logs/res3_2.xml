@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<?Adf-Rich-Response-Type ?>
+<content action="/webcenter/faces/oracle/webcenter/page/scopedMD/sd2b50f54_ac0a_47e2_b00f_984ce247306c/ttm.jspx?_adf.ctrl-state=670p8b01y_4"> <fragment><![CDATA[<div id="T:oc_2127165840region" class="xpg"><div id="T:oc_2127165840region:pgl4" class="x2ej x1a"><div><div id="T:oc_2127165840region:pgl3" class="title-form x2er x1a"><div><span id="T:oc_2127165840region:ol1" class="xq"><label>B&#7843;ng s&#7889; li&#7879;u</label></span></div></div></div><div><div id="T:oc_2127165840region:j_id__ctru4pc9" class="x2f9 x6v"><table class="xtw" cellpadding="0" cellspacing="0" border="0" width="0" summary=""><tr><td class="xud">&nbsp;</td><td class="xvd"><table cellpadding="0" cellspacing="0" border="0" width="100%" summary=""><tr><td class="x21v"></td><td id="T:oc_2127165840region:j_id__ctru4pc9::_afrTtxt"><div title="" class="xu1"><h1 class="xdl "></h1></div></td><td id="T:oc_2127165840region:j_id__ctru4pc9::_afrEps"><div class="xdl  xw7" style="display: none" title="">&#8230;</div></td><td id="T:oc_2127165840region:j_id__ctru4pc9::_afrStr" style="width: 100%"></td></tr></table></td><td class="xuv">&nbsp;</td></tr></table><div class="xwa"><div><span id="T:oc_2127165840region:j_id__ctru5pc9" class="x1a" style="display:none"><table id="T:oc_2127165840region:tl1" cellpadding="0" cellspacing="0" border="0" summary=""></table></span><span id="T:oc_2127165840region:j_id__ctru7pc9" class="x1a"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head> 
+  <title></title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <style type="text/css">
+    a {text-decoration: none}
+  </style> 
+ </head> 
+ <body text="#000000" link="#000000" alink="#000000" vlink="#000000"> 
+  <table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+   <tbody>
+    <tr>
+     <td width="50%">&nbsp;</td>
+     <td align="center"> <a name="JR_PAGE_ANCHOR_0_1"></a> 
+      <table class="jrPage" cellpadding="0" cellspacing="0" border="0" style="empty-cells: show; width: 695px; border-collapse: collapse; background-color: white;"> 
+       <tbody>
+        <tr valign="top" style="height:0"> 
+         <td style="width:275px"></td> 
+         <td style="width:135px"></td> 
+         <td style="width:150px"></td> 
+         <td style="width:134px"></td> 
+         <td style="width:1px"></td> 
+        </tr> 
+        <tr valign="top" style="height:30px"> 
+         <td colspan="5" style="text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #CD7B2C; font-size: 13px; line-height: 1.1499023; font-weight: bold;">THÔNG TIN VỀ DIỄN BIẾN TRÊN THỊ TRƯỜNG (THÔNG TIN ĐẤU THẦU, KẾT QUẢ ĐẤU THẦU)</span></td> 
+        </tr> 
+        <tr valign="top" style="height:1px"> 
+         <td colspan="5"> </td> 
+        </tr> 
+        <tr valign="top" style="height:20px"> 
+         <td colspan="5" style="text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">KẾT QUẢ ĐẤU THẦU THỊ TRƯỜNG MỞ</span></td> 
+        </tr> 
+        <tr valign="top" style="height:2px"> 
+         <td colspan="5"> </td> 
+        </tr> 
+        <tr valign="top" style="height:20px"> 
+         <td colspan="5" style="text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023; font-weight: bold;">Ngày 26 tháng 08 năm 2025</span></td> 
+        </tr> 
+        <tr valign="top" style="height:7px"> 
+         <td colspan="5"> </td> 
+        </tr> 
+        <tr valign="top" style="height:62px"> 
+         <td style="background-color: #FED4A0; border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #CD7B2C; font-size: 13px; line-height: 1.1499023; font-weight: bold;">Loại hình giao dịch</span></td> 
+         <td style="background-color: #FED4A0; border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #CD7B2C; font-size: 13px; line-height: 1.1499023; font-weight: bold;">Số thành viên tham gia/trúng thầu</span></td> 
+         <td style="background-color: #FED4A0; border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #CD7B2C; font-size: 13px; line-height: 1.1499023; font-weight: bold;">Khối lượng trúng thầu<br>(Tỷ đồng)</span></td> 
+         <td colspan="2" style="background-color: #FED4A0; border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #CD7B2C; font-size: 13px; line-height: 1.1499023; font-weight: bold;">Lãi suất trúng thầu<br>(%/năm)</span></td> 
+        </tr> 
+        <tr valign="top" style="height:31px"> 
+         <td style="border: 1px solid #B8B1AA; padding-left: 10px; text-indent: 0px;  vertical-align: middle;text-align: left;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023; font-weight: bold;">Mua kỳ hạn</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: left;"> </td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: left;"> </td> 
+         <td colspan="2" style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: left;"> </td> 
+        </tr> 
+        <tr valign="top" style="height:31px"> 
+         <td style="border: 1px solid #B8B1AA; padding-left: 15px; text-indent: 0px;  vertical-align: middle;text-align: left;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">- Kỳ hạn 7</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0/0</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0</span></td> 
+         <td colspan="2" style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0</span></td> 
+        </tr> 
+        <tr valign="top" style="height:31px"> 
+         <td style="border: 1px solid #B8B1AA; padding-left: 15px; text-indent: 0px;  vertical-align: middle;text-align: left;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">- Kỳ hạn 14</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0/0</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0</span></td> 
+         <td colspan="2" style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0</span></td> 
+        </tr> 
+        <tr valign="top" style="height:31px"> 
+         <td style="border: 1px solid #B8B1AA; padding-left: 15px; text-indent: 0px;  vertical-align: middle;text-align: left;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">- Kỳ hạn 28</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">1/1</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">3.779,89</span></td> 
+         <td colspan="2" style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">4</span></td> 
+        </tr> 
+        <tr valign="top" style="height:31px"> 
+         <td style="border: 1px solid #B8B1AA; padding-left: 15px; text-indent: 0px;  vertical-align: middle;text-align: left;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">- Kỳ hạn 91</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0/0</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0</span></td> 
+         <td colspan="2" style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">0</span></td> 
+        </tr> 
+        <tr valign="top" style="height:30px"> 
+         <td style="border: 1px solid #B8B1AA; padding-left: 10px; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023; font-weight: bold; font-style: italic;">Tổng cộng</span></td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: left;"> </td> 
+         <td style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: center;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023; font-weight: bold;">3.779,89</span></td> 
+         <td colspan="2" style="border: 1px solid #B8B1AA; text-indent: 0px;  vertical-align: middle;text-align: left;"> </td> 
+        </tr> 
+        <tr valign="top" style="height:10px"> 
+         <td colspan="5"> </td> 
+        </tr> 
+        <tr valign="top" style="height:19px"> 
+         <td colspan="5" style="text-indent: 0px; text-align: left;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023; font-weight: bold; font-style: italic;">Ghi chú:</span></td> 
+        </tr> 
+        <tr valign="top" style="height:74px"> 
+         <td colspan="4" style="text-indent: 0px; text-align: left;"> <span style="font-family: Arial; color: #000000; font-size: 13px; line-height: 1.1499023;">- Hình thức đấu thầu: Cạnh tranh lãi suất, kết hợp cạnh tranh lãi suất và không cạnh tranh lãi suất và các hình thức khác có thể bổ sung mới khi cần thiết.<br>- Kỳ hạn tính theo các đơn vị ngày, tuần, tháng...(đơn vị có thể bổ sung khi có phát sinh mới)<br>- Trong một phiên đấu thầu, các hình thức đấu thầu không phát sinh sẽ được ẩn đi toàn bộ nội dung.<br>- Lãi suất đăng ký hiển thị theo dạng: &lt;Lãi suất thấp nhất&gt; - &lt;Lãi suất cao nhất&gt;</span></td> 
+         <td> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <!--[if IE]-->  
+      <!--[endif]--> </td>
+     <td width="50%">&nbsp;</td>
+    </tr> 
+   </tbody>
+  </table>   
+ </body>
+</html></span><div id="T:oc_2127165840region:pgl1" class="x2fc x1a"><div><a id="T:oc_2127165840region:j_id__ctru11pc9" class="x2fd xfe" onclick="return false;" href="#">Quay l&#7841;i</a></div></div></div></div></div></div></div><div style="display:none"><a id="T:oc_2127165840region:_afrCommandDelegate" class="xfe" onclick="return false;" href="#"></a></div></div>]]></fragment><fragment><![CDATA[<span id="f1::postscript"><input type="hidden" name="javax.faces.ViewState" value="!-zycf055vp"></span>]]></fragment><script-library>/webcenter/afr/partition/unknown/n/default/opt/detail-11.1.1.7.0-3009.js</script-library><script-library>/webcenter/afr/partition/unknown/n/default/opt/box-11.1.1.7.0-3009.js</script-library><script-library>/webcenter/afr/partition/unknown/n/default/opt/region-11.1.1.7.0-3009.js</script-library><script-library>/webcenter/afr/partition/unknown/n/default/opt/header-11.1.1.7.0-3009.js</script-library><script-library>/webcenter/afr/partition/unknown/n/default/opt/label-11.1.1.7.0-3009.js</script-library><script><![CDATA[AdfPage.PAGE.addComponents(new AdfRichRegion('T:oc_2127165840region',{'immediate':true}),new AdfRichOutputLabel('T:oc_2127165840region:ol1'),new AdfRichPanelHeader('T:oc_2127165840region:j_id__ctru4pc9'),new AdfRichCommandLink('T:oc_2127165840region:j_id__ctru11pc9'),new AdfRichCommandLink('T:oc_2127165840region:_afrCommandDelegate',{'partialSubmit':true}));AdfPage.PAGE.__initPollingTimeout(600000);page.__setAutomationEnabled(false);page.__setCssSelectorsUncompressed(false);AdfPage.PAGE.clearMessages();AdfPage.PAGE.clearSubtreeMessages('T:oc_2127165840region');]]></script><script>document.webcenterStartClientSessionTimers = function()
+{
+  if(document.webcenterSessionTimeoutTimer != null)
+    window.clearTimeout(document.webcenterSessionTimeoutTimer);
+
+  document.webcenterSessionTimeoutTimer = window.setTimeout("document.webcenterClientSessionTimeout();", 2700000);
+
+}
+document.webcenterStartClientSessionTimers();
+
+document.webcenterClientSessionTimeout = function()
+{
+}</script></content>

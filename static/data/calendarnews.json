@@ -1,0 +1,482 @@
+[
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core Inflation Rate MoM JUL",
+    "actual": "0.3%",
+    "previous": "0.2%",
+    "consensus": "0.3%",
+    "forecast": "0.2%",
+    "date": "2025-08-12"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core Inflation Rate YoY JUL",
+    "actual": "3.1%",
+    "previous": "2.9%",
+    "consensus": "3%",
+    "forecast": "3%",
+    "date": "2025-08-12"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Inflation Rate MoM JUL",
+    "actual": "0.2%",
+    "previous": "0.3%",
+    "consensus": "0.2%",
+    "forecast": "0.2%",
+    "date": "2025-08-12"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Inflation Rate YoY JUL",
+    "actual": "2.7%",
+    "previous": "2.7%",
+    "consensus": "2.8%",
+    "forecast": "2.7%",
+    "date": "2025-08-12"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "PPI MoM JUL",
+    "actual": "0.9%",
+    "previous": "0%",
+    "consensus": "0.2%",
+    "forecast": "0.2%",
+    "date": "2025-08-14"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Retail Sales MoM JUL",
+    "actual": "0.5%",
+    "previous": "0.9%",
+    "consensus": "0.5%",
+    "forecast": "0.4%",
+    "date": "2025-08-15"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Michigan Consumer Sentiment Prel AUG",
+    "actual": "58.6",
+    "previous": "61.7",
+    "consensus": "62",
+    "forecast": "60.5",
+    "date": "2025-08-15"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Building Permits Prel JUL",
+    "actual": "1.354M",
+    "previous": "1.393M",
+    "consensus": "1.39M",
+    "forecast": "1.39M",
+    "date": "2025-08-19"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Housing Starts JUL",
+    "actual": "1.428M",
+    "previous": "1.358M",
+    "consensus": "1.29M",
+    "forecast": "1.29M",
+    "date": "2025-08-19"
+  },
+  {
+    "time": "01:00 AM",
+    "nation": "US",
+    "indicator": "FOMC Minutes",
+    "actual": "",
+    "previous": "",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-08-21"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Existing Home Sales JUL",
+    "actual": "4.01M",
+    "previous": "3.93M",
+    "consensus": "3.92M",
+    "forecast": "3.9M",
+    "date": "2025-08-21"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Fed Chair Powell Speech",
+    "actual": "",
+    "previous": "",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-08-22"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Durable Goods Orders MoM JUL",
+    "actual": "-2.8%",
+    "previous": "-9.4%",
+    "consensus": "-4%",
+    "forecast": "-2.5%",
+    "date": "2025-08-26"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "GDP Growth Rate QoQ 2nd Est Q2",
+    "actual": "3.3%",
+    "previous": "-0.5%",
+    "consensus": "3.1%",
+    "forecast": "3.0%",
+    "date": "2025-08-28"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core PCE Price Index MoM JUL",
+    "actual": "0.3%",
+    "previous": "0.3%",
+    "consensus": "0.3%",
+    "forecast": "0.2%",
+    "date": "2025-08-29"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Income MoM JUL",
+    "actual": "0.4%",
+    "previous": "0.3%",
+    "consensus": "0.4%",
+    "forecast": "0.3%",
+    "date": "2025-08-29"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Spending MoM JUL",
+    "actual": "0.5%",
+    "previous": "0.4%",
+    "consensus": "0.5%",
+    "forecast": "0.3%",
+    "date": "2025-08-29"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "ISM Manufacturing PMI AUG",
+    "actual": "48.7",
+    "previous": "48.0",
+    "consensus": "49",
+    "forecast": "48.2",
+    "date": "2025-09-02"
+  },
+  {
+    "time": "07:30 AM",
+    "nation": "VN",
+    "indicator": "S&P Global Manufacturing PMI AUG",
+    "actual": "50.4",
+    "previous": "52.4",
+    "consensus": "",
+    "forecast": "52.1",
+    "date": "2025-09-03"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "JOLTs Job Openings JUL",
+    "actual": "7.181M",
+    "previous": "7.357M",
+    "consensus": "7.4M",
+    "forecast": "7.3M",
+    "date": "2025-09-03"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "ISM Services PMI AUG",
+    "actual": "52.0",
+    "previous": "50.1",
+    "consensus": "51",
+    "forecast": "50.7",
+    "date": "2025-09-04"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Non Farm Payrolls AUG",
+    "actual": "22K",
+    "previous": "79K",
+    "consensus": "75K",
+    "forecast": "75.0K",
+    "date": "2025-09-05"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Unemployment Rate AUG",
+    "actual": "4.3%",
+    "previous": "4.2%",
+    "consensus": "4.3%",
+    "forecast": "4.2%",
+    "date": "2025-09-05"
+  },
+  {
+    "time": "09:00 AM",
+    "nation": "VN",
+    "indicator": "Balance of Trade AUG",
+    "actual": "$3.72B",
+    "previous": "$2.29B",
+    "consensus": "",
+    "forecast": "$3.9B",
+    "date": "2025-09-06"
+  },
+  {
+    "time": "09:00 AM",
+    "nation": "VN",
+    "indicator": "Foreign Direct Investment AUG",
+    "actual": "$15.40B",
+    "previous": "$13.60B",
+    "consensus": "",
+    "forecast": "$14.5B",
+    "date": "2025-09-06"
+  },
+  {
+    "time": "09:00 AM",
+    "nation": "VN",
+    "indicator": "Industrial Production YoY AUG",
+    "actual": "8.9%",
+    "previous": "7.4%",
+    "consensus": "",
+    "forecast": "9.0%",
+    "date": "2025-09-06"
+  },
+  {
+    "time": "09:00 AM",
+    "nation": "VN",
+    "indicator": "Inflation Rate YoY AUG",
+    "actual": "3.24%",
+    "previous": "3.19%",
+    "consensus": "",
+    "forecast": "3.1%",
+    "date": "2025-09-06"
+  },
+  {
+    "time": "09:00 AM",
+    "nation": "VN",
+    "indicator": "Retail Sales YoY AUG",
+    "actual": "10.6%",
+    "previous": "9.2%",
+    "consensus": "",
+    "forecast": "8.8%",
+    "date": "2025-09-06"
+  },
+  {
+    "time": "09:00 AM",
+    "nation": "VN",
+    "indicator": "Tourist Arrivals YoY AUG",
+    "actual": "16.5%",
+    "previous": "35.7%",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-06"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Non Farm Payrolls Annual Revision",
+    "actual": "-911K",
+    "previous": "-818K",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-09"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "PPI MoM AUG",
+    "actual": "",
+    "previous": "0.9%",
+    "consensus": "0.3%",
+    "forecast": "0.4%",
+    "date": "2025-09-10"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core Inflation Rate MoM AUG",
+    "actual": "",
+    "previous": "0.3%",
+    "consensus": "0.3%",
+    "forecast": "0.3%",
+    "date": "2025-09-11"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core Inflation Rate YoY AUG",
+    "actual": "",
+    "previous": "3.1%",
+    "consensus": "3.1%",
+    "forecast": "3.1%",
+    "date": "2025-09-11"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Inflation Rate MoM AUG",
+    "actual": "",
+    "previous": "0.2%",
+    "consensus": "0.3%",
+    "forecast": "0.3%",
+    "date": "2025-09-11"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Inflation Rate YoY AUG",
+    "actual": "",
+    "previous": "2.7%",
+    "consensus": "2.9%",
+    "forecast": "2.8%",
+    "date": "2025-09-11"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Michigan Consumer Sentiment Prel SEP",
+    "actual": "",
+    "previous": "58.2",
+    "consensus": "58",
+    "forecast": "57",
+    "date": "2025-09-12"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Retail Sales MoM AUG",
+    "actual": "",
+    "previous": "0.5%",
+    "consensus": "",
+    "forecast": "0.4%",
+    "date": "2025-09-16"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Building Permits Prel AUG",
+    "actual": "",
+    "previous": "1.362M",
+    "consensus": "",
+    "forecast": "1.37M",
+    "date": "2025-09-17"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Housing Starts AUG",
+    "actual": "",
+    "previous": "1.428M",
+    "consensus": "",
+    "forecast": "1.37M",
+    "date": "2025-09-17"
+  },
+  {
+    "time": "01:00 AM",
+    "nation": "US",
+    "indicator": "Fed Interest Rate Decision",
+    "actual": "",
+    "previous": "4.5%",
+    "consensus": "4.25%",
+    "forecast": "4.25%",
+    "date": "2025-09-18"
+  },
+  {
+    "time": "01:00 AM",
+    "nation": "US",
+    "indicator": "FOMC Economic Projections",
+    "actual": "",
+    "previous": "",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-18"
+  },
+  {
+    "time": "01:30 AM",
+    "nation": "US",
+    "indicator": "Fed Press Conference",
+    "actual": "",
+    "previous": "",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-18"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "Existing Home Sales AUG",
+    "actual": "",
+    "previous": "4.01M",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-23"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Durable Goods Orders MoM AUG",
+    "actual": "",
+    "previous": "-2.8%",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-25"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "GDP Growth Rate QoQ Final Q2",
+    "actual": "",
+    "previous": "-0.5%",
+    "consensus": "",
+    "forecast": "3.3%",
+    "date": "2025-09-25"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Core PCE Price Index MoM AUG",
+    "actual": "",
+    "previous": "0.3%",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-26"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Income MoM AUG",
+    "actual": "",
+    "previous": "",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-26"
+  },
+  {
+    "time": "07:30 PM",
+    "nation": "US",
+    "indicator": "Personal Spending MoM AUG",
+    "actual": "",
+    "previous": "0.5%",
+    "consensus": "",
+    "forecast": "",
+    "date": "2025-09-26"
+  }
+]
