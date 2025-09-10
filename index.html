@@ -1,4 +1,4 @@
-<!-- templates/home.html -->
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,65 +42,15 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="static/images/favicon.png" width="24" height="24"/> Bản tin thị trường</a>
+            <a class="navbar-brand" href="#"><img src="static/images/favicon.png" width="24" height="24"/> Bản tin thị trường</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Lãi suất / tỷ giá
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li class="nav-item"><a class="nav-link" href="/markets/tpcp">Trái phiếu chính phủ (HNX)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/markets/lshd">Lãi suất huy động</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/markets/omo">Thị trường mở (OMO)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/markets/interbank">Liên ngân hàng</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/markets/sofr">Lãi suất SOFR</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/markets/tygia">Tỷ giá ngoại tệ</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dữ liệu vĩ mô
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li class="nav-item"><a class="nav-link" href="/macros/calendar">Lịch chỉ số</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/macros/allnews">Tin vĩ mô</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/macros/monthly">Chỉ số vĩ mô-tháng</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/macros/quarterly">Chỉ số vĩ mô-quý</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Tổng hợp
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li class="nav-item"><a class="nav-link" href="/tonghop/omonet">Dòng tiền, tỷ giá, lãi suất</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tonghop/macrotrend">Vĩ mô và tỷ giá</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/tonghop/nhandinh">Nhận định vĩ mô và thị trường</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="/users/about">Giới thiệu</a></li>
-              </ul>
-              <span class="navbar-text">
-                <a class="btn btn-outline-primary btn-sm" href="/users/login"><i class="bi bi-person"></i> Đăng nhập</a>
-              </span>
-            </div>
           </div>
         </nav>
     </header>
 
     <!-- Main Content -->
-    <main>
-        
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
-        <li class="breadcrumb-item active" aria-current="dashboard">Dashboard</li>
-      </ol>
-    </nav>
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
@@ -829,6 +779,8 @@
 
     <!-- Footer -->
     <footer class="text-center">
+        <p>Ứng dụng AI tổng hợp thông tin hoàn toàn tự động từ nhiều nguồn trực tuyến có thể phát sinh sai sót, cập nhật không kịp thời và chỉ mang tính chất tham khảo</p>
+        <p>Chúng tôi không có bất kỳ trách nhiệm nào trong việc sử dụng các thông tin tham khảo này</p>
         <p>&copy; 2025 Agribank - Trung tâm Quản lý rủi ro phi tín dụng - Phòng QLRR Thị trường</p>
     </footer>
   </body>
