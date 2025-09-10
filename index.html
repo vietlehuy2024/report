@@ -140,10 +140,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12 col-sm-12">
           <canvas id="myChart3"></canvas>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-12 col-sm-12">
           <canvas id="myChart4"></canvas>
         </div>
       </div>
@@ -458,7 +458,7 @@
               {data: "VNIBOR-ON", title: "VNIBOR-ON"},
               {data: "VNIBOR-3M", title: "VNIBOR-3M"},
               {data: "annualrate", title: "10Y"},
-              {data: "net", title: "OMO-NET"},
+              {data: "net", title: "Bơm ròng OMO"},
               {data: "USD/VND", title: "USDVND"},
               {data: "tygiasbv", title: "SBV"},
               {data: "DX-YNYB", title: "DXY"},
@@ -495,7 +495,7 @@
           var myChart = new Chart(ctx, {
             data: {
               datasets: [{
-                label: 'OMO-NET',
+                label: 'Bơm ròng OMO',
                 data: chartData.nets,
                 type: 'bar',
                 yAxisID: 'y',
@@ -657,7 +657,7 @@
           var myChart5 = new Chart(ctx5, {
             data: {
               datasets: [{
-                label: 'OMO-NET',
+                label: 'Bơm ròng OMO',
                 data: chartData.nets,
                 type: 'bar',
                 yAxisID: 'y',
@@ -723,7 +723,7 @@
           var myChart2 = new Chart(ctx2, {
             data: {
               datasets: [{
-                label: 'OMO-NET',
+                label: 'Bơm ròng OMO',
                 data: chartData.nets,
                 type: 'bar',
                 yAxisID: 'y',
@@ -739,7 +739,7 @@
               plugins: {
                 title: {
                   display: true,
-                  text: "Tỷ giá USD/VND và Bơm ròng OMO-NET"
+                  text: "Tỷ giá USD/VND và Bơm ròng OMO"
                 },
                 legend: {
                   display: true,
