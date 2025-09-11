@@ -227,6 +227,14 @@
           });
           $('#groupFilter').val("market");
           $('#groupFilter').change();
+          $("#btnRead").click(function() {
+            var strRead = "";
+            var filteredRows = table1.rows({ search: 'applied' });
+            // Get data of the first filtered row
+            var firstFilteredRowData = filteredRows.data()[0];
+            strRead = firstFilteredRowData["conclusion"];
+            responsiveVoice.speak(strRead, "Vietnamese Female");
+          });
         });
         $.get("static/data/macrotrend.json",function(data){
           var chartData3 = {
@@ -775,9 +783,6 @@
             table.draw();
           });
           $('button[data-previous="30"]').click();
-        });
-        $("#btnRead").click(function() {
-          responsiveVoice.speak("Xin chào, bạn khỏe không?", "Vietnamese Male");
         });
       });
     </script>
