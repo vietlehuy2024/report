@@ -253,6 +253,8 @@
             // Get data of the first filtered row
             var firstFilteredRowData = filteredRows.data()[0];
             strRead = firstFilteredRowData["conclusion"];
+            strRead = strRead + $("#analyze").text() + $("#macro_analyze").text();
+            console.log(strRead);
             responsiveVoice.speak(strRead, "Vietnamese Female");
           });
         });
