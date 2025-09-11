@@ -92,6 +92,13 @@
           <i>Nguồn dữ liệu: sbv.gov.vn | hnx.vn | tradingeconomics.com | vietstock.vn | data.vietnambiz.vn </i>
           <table id="alldata" class="table table-hover"></table>
         </div>
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text" id="analyze"></p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12">
@@ -107,6 +114,13 @@
             <option value="">Tất cả</option>
           </select></h5>
           <table id="economics" class="table table-hover"></table>
+        </div>
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text" id="macro_analyze"></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -156,6 +170,12 @@
         return { vniborons, vnibor3ms, rate10ys, nets, rate3ms, rate12ms, usdvnds, tygiasbvs, sofrs, vnisofrs };
       }
       $(document).ready(function() {
+        $.get("static/data/omo_analyze.json",function(data) {
+          $("#analyze").html(data[0]["analyze"].replaceAll("\n\n","<br/>").replaceAll("\n","<br/>").replaceAll("####","<br/>").replaceAll("###","<br/>").replaceAll("**",""));
+        });
+        $.get("static/data/macro_analyze.json",function(data) {
+          $("#macro_analyze").html(data[0]["analyze"].replaceAll("\n\n","<br/>").replaceAll("\n","<br/>").replaceAll("####","<br/>").replaceAll("###","<br/>").replaceAll("**",""));
+        });
         $.get("static/data/calendarnews.json", function(data){
           var nationMaps = {
             "VN":"Việt Nam",

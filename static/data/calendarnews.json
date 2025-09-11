@@ -303,8 +303,8 @@
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "PPI MoM AUG",
-    "actual": "",
-    "previous": "0.9%",
+    "actual": "-0.1%",
+    "previous": "0.7%",
     "consensus": "0.3%",
     "forecast": "0.4%",
     "date": "2025-09-10"
@@ -313,7 +313,7 @@
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "Core Inflation Rate MoM AUG",
-    "actual": "",
+    "actual": "0.3%",
     "previous": "0.3%",
     "consensus": "0.3%",
     "forecast": "0.3%",
@@ -323,7 +323,7 @@
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "Core Inflation Rate YoY AUG",
-    "actual": "",
+    "actual": "3.1%",
     "previous": "3.1%",
     "consensus": "3.1%",
     "forecast": "3.1%",
@@ -333,7 +333,7 @@
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "Inflation Rate MoM AUG",
-    "actual": "",
+    "actual": "0.4%",
     "previous": "0.2%",
     "consensus": "0.3%",
     "forecast": "0.3%",
@@ -343,7 +343,7 @@
     "time": "07:30 PM",
     "nation": "US",
     "indicator": "Inflation Rate YoY AUG",
-    "actual": "",
+    "actual": "2.9%",
     "previous": "2.7%",
     "consensus": "2.9%",
     "forecast": "2.8%",
@@ -365,7 +365,7 @@
     "indicator": "Retail Sales MoM AUG",
     "actual": "",
     "previous": "0.5%",
-    "consensus": "",
+    "consensus": "0.3%",
     "forecast": "0.4%",
     "date": "2025-09-16"
   },
@@ -375,7 +375,7 @@
     "indicator": "Building Permits Prel AUG",
     "actual": "",
     "previous": "1.362M",
-    "consensus": "",
+    "consensus": "1.37M",
     "forecast": "1.37M",
     "date": "2025-09-17"
   },
@@ -385,7 +385,7 @@
     "indicator": "Housing Starts AUG",
     "actual": "",
     "previous": "1.428M",
-    "consensus": "",
+    "consensus": "1.38M",
     "forecast": "1.37M",
     "date": "2025-09-17"
   },
@@ -478,5 +478,15 @@
     "consensus": "",
     "forecast": "",
     "date": "2025-09-26"
+  },
+  {
+    "time": "09:00 PM",
+    "nation": "US",
+    "indicator": "JOLTs Job Openings AUG",
+    "actual": "",
+    "previous": "7.181M",
+    "consensus": "",
+    "forecast": "7.1M",
+    "date": "2025-09-30"
   }
 ]
