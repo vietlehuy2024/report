@@ -33,6 +33,9 @@
     <script src="https://cdn.datatables.net/buttons/3.2.4/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/3.2.4/js/buttons.print.min.js"></script>
 
+    <!-- Voice JavaScript -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=BO6uqyo7"></script>
+
     <title>Phân tích thị trường - Trang chủ</title>
     <link rel="icon" href="static/images/favicon.png" type="image/png">
   </head>
@@ -57,6 +60,7 @@
           <select id="groupFilter">
             <option value="">Tất cả</option>
           </select>
+          <button class="btn btn-primary btn-sm" id="btnRead">Đọc nhận định</button>
           <table id="nhandinh" class="table table-hover"></table>
         </div>
       </div>
@@ -771,6 +775,9 @@
             table.draw();
           });
           $('button[data-previous="30"]').click();
+        });
+        $("#btnRead").click(function() {
+          responsiveVoice.speak("Xin chào, bạn khỏe không?", "Vietnamese Male");
         });
       });
     </script>
