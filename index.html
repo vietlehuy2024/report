@@ -95,6 +95,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
+              <button class="btn btn-primary btn-sm" id="btnReadAnalyze">Đọc phân tích</button>
               <p class="card-text" id="analyze"></p>
             </div>
           </div>
@@ -118,6 +119,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
+              <button class="btn btn-primary btn-sm" id="btnReadMacroAnalyze">Đọc phân tích</button>
               <p class="card-text" id="macro_analyze"></p>
             </div>
           </div>
@@ -172,9 +174,17 @@
       $(document).ready(function() {
         $.get("static/data/omo_analyze.json",function(data) {
           $("#analyze").html(data[0]["analyze"].replaceAll("\n\n","<br/>").replaceAll("\n","<br/>").replaceAll("####","<br/>").replaceAll("###","<br/>").replaceAll("**",""));
+          $("#btnReadAnalyze").click(function() {
+            var strRead = $("#analyze").text();
+            responsiveVoice.speak(strRead, "Vietnamese Female");
+          });
         });
         $.get("static/data/macro_analyze.json",function(data) {
           $("#macro_analyze").html(data[0]["analyze"].replaceAll("\n\n","<br/>").replaceAll("\n","<br/>").replaceAll("####","<br/>").replaceAll("###","<br/>").replaceAll("**",""));
+          $("#btnReadMacroAnalyze").click(function() {
+            var strRead = $("#macro_analyze").text();
+            responsiveVoice.speak(strRead, "Vietnamese Female");
+          });
         });
         $.get("static/data/calendarnews.json", function(data){
           var nationMaps = {
